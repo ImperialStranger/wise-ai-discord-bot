@@ -42,4 +42,4 @@ def generate_response(prompt):
 
     return response.choices[0].text.strip()
 
-client.run("MTA5MTI4MTg0MDgxNzU2OTgxMg.GqhjEs.r1lqsVzGD05DMCRdpKmT2LuL7RrXqCJsOMODM0")
+client.run("MTA5MTI4MTg0MDgxNzU2OTgxMg.GuP5Sl.MhuZ4BuvrI27c53OEwTN1c_dedHbYWdeCGwwzg")
