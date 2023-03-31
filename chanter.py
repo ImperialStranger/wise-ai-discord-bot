@@ -1,8 +1,9 @@
 import discord
 import openai
+import os
 
 
-openai.api_key = "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"
+openai.api_key = os.environ.get("chatgpt")
 
 intents = discord.Intents.default()
 intents.members = True
@@ -42,4 +43,4 @@ def generate_response(prompt):
 
     return response.choices[0].text.strip()
 
-client.run("MTA5MTI4MTg0MDgxNzU2OTgxMg.GuP5Sl.MhuZ4BuvrI27c53OEwTN1c_dedHbYWdeCGwwzg")
+client.run(os.environ.get("bot"))
