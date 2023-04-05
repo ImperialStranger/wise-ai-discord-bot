@@ -35,7 +35,7 @@ def generate_response(prompt):
     response = openai.Completion.create(
         engine=model_engine,
         prompt=prompt,
-        max_tokens=220,
+        max_tokens=2048,
         n=1,
         stop=None,
         temperature=0.9,
