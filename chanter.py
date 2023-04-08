@@ -19,14 +19,13 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if client.user in message.mentions: # Check if bot was mentioned
-        prompt = message.content.replace(f'<@!{client.user.id}> ', '') # Remove bot mention from prompt
-        response = generate_response(prompt)
+    if isinstance(message.channel, discord.DMChannel):
+        response = generate_response(message.content)
         await message.channel.send(response)
-
-    elif message.content.startswith('!chanter'):
-        prompt = message.content[9:] # Remove the "!chanter " prefix
-        response = generate_response(prompt)
+        
+    # Check if the bot is mentioned in the message
+    elif client.user in message.mentions:
+        response = generate_response(message.content)
         await message.channel.send(response)
 
 def generate_response(prompt):
