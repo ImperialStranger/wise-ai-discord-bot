@@ -33,7 +33,7 @@ async def on_message(message):
         response = generate_response(message.content, user_id)
         await message.channel.send(response)
 
-def generate_response(prompt):
+def generate_response(prompt, user_id):
     
     # Get the user's previous message
     previous_message = previous_messages.get(user_id, "")
