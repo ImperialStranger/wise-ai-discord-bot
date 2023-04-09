@@ -3,7 +3,7 @@ import openai
 import os
 
 
-openai.api_key = os.environ.get("chatgpt")
+openai.api_key = os.environ.get("CHATGPT_API_KEY")
 
 intents = discord.Intents.default()
 intents.members = True
@@ -42,4 +42,4 @@ def generate_response(prompt):
 
     return response.choices[0].text.strip()
 
-client.run(os.environ.get("bot"))
+client.run(os.environ.get("DISCORD_BOT_TOKEN"))
