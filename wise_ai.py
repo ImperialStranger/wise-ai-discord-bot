@@ -3,7 +3,7 @@ import openai
 import os
 
 
-openai.api_key = os.environ.get("CHATGPT_API_KEY")
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 intents = discord.Intents.default()
 intents.members = True
